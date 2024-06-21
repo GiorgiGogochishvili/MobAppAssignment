@@ -3,13 +3,17 @@ package com.example.assignment;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+
+
+import androidx.annotation.NonNull;
+
+import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,25 +22,39 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.nav_home) {
-                startActivity(new Intent(this, MainActivity.class));
-                return true;
-            } else if (item.getItemId() == R.id.nav_search) {
-                startActivity(new Intent(this, SearchActivity.class));
-                return true;
-            }  else if (item.getItemId() == R.id.nav_settings) {
-                startActivity(new Intent(this, SettingsActivity.class));
-                return true;
-            } else if (item.getItemId() == R.id.nav_check) {
-                startActivity(new Intent(this, CheckActivity.class));
-                return true;
-            } else if (item.getItemId() == R.id.nav_exit) {
-                startActivity(new Intent(this, ExitActivity.class));
-                return true;
+        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setSelectedItemId(R.id.nav_home);
+
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch(item.getItemId())
+                {
+                    case R.id.nav_home:
+                        return true;
+                    case R.id.nav_search:
+                        startActivity(new Intent(getApplicationContext(),SearchActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.nav_settings:
+                        startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.nav_check:
+                        startActivity(new Intent(getApplicationContext(),CheckActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.nav_exit:
+                        startActivity(new Intent(getApplicationContext(),ExitActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+                return false;
             }
-            return false;
         });
+
     }
 }

@@ -2,8 +2,10 @@ package com.example.assignment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -18,25 +20,37 @@ public class ExitActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exit);
 
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.nav_home) {
-                startActivity(new Intent(this, MainActivity.class));
-                return true;
-            } else if (item.getItemId() == R.id.nav_search) {
-                startActivity(new Intent(this, SearchActivity.class));
-                return true;
-            }  else if (item.getItemId() == R.id.nav_settings) {
-                startActivity(new Intent(this, SettingsActivity.class));
-                return true;
-            } else if (item.getItemId() == R.id.nav_check) {
-                startActivity(new Intent(this, CheckActivity.class));
-                return true;
-            } else if (item.getItemId() == R.id.nav_exit) {
-                startActivity(new Intent(this, ExitActivity.class));
-                return true;
+        bottomNavigationView.setSelectedItemId(R.id.nav_exit);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch(item.getItemId())
+                {
+                    case R.id.nav_home:
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.nav_search:
+                        startActivity(new Intent(getApplicationContext(),SearchActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.nav_settings:
+                        startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.nav_check:
+                        startActivity(new Intent(getApplicationContext(),CheckActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.nav_exit:
+                        return true;
+                }
+                return false;
             }
-            return false;
         });
     }
 }
