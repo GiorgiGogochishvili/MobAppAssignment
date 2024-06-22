@@ -12,8 +12,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.MenuItem;
 
@@ -37,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     case R.id.nav_home:
                         return true;
-                    case R.id.nav_search:
+                    case R.id.nav_location:
                         startActivity(new Intent(getApplicationContext(),SearchActivity.class));
                         overridePendingTransition(0,0);
                         return true;
@@ -45,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.nav_check:
+                    case R.id.nav_liked:
                         startActivity(new Intent(getApplicationContext(),CheckActivity.class));
                         overridePendingTransition(0,0);
                         return true;

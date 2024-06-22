@@ -5,22 +5,47 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
     tools:context=".ExitActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="exit"
+    <fragment
+        android:id="@+id/exitfragment1"
+        android:name="com.example.assignment.exitFragment1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/exitfragment2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.343" />
+
+    <fragment
+        android:id="@+id/exitfragment2"
+        android:name="com.example.assignment.exitFragment2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="88dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        app:itemIconTint="@drawable/selector"
-        app:itemTextColor="@drawable/selector"
         app:itemBackground="@color/black"
-        app:menu="@menu/bottom_navbar"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:itemIconTint="@drawable/selector"
+
+        app:itemTextColor="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

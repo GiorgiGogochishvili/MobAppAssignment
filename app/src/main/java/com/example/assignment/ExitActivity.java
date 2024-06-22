@@ -4,12 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -34,7 +30,7 @@ public class ExitActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.nav_search:
+                    case R.id.nav_location:
                         startActivity(new Intent(getApplicationContext(),SearchActivity.class));
                         overridePendingTransition(0,0);
                         return true;
@@ -42,7 +38,7 @@ public class ExitActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.nav_check:
+                    case R.id.nav_liked:
                         startActivity(new Intent(getApplicationContext(),CheckActivity.class));
                         overridePendingTransition(0,0);
                         return true;

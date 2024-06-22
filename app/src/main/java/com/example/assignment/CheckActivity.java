@@ -4,12 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -18,11 +14,11 @@ public class CheckActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_check);
+        setContentView(R.layout.activity_liked);
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.nav_check);
+        bottomNavigationView.setSelectedItemId(R.id.nav_liked);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -33,7 +29,7 @@ public class CheckActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.nav_search:
+                    case R.id.nav_location:
                         startActivity(new Intent(getApplicationContext(),SearchActivity.class));
                         overridePendingTransition(0,0);
                         return true;
@@ -41,7 +37,7 @@ public class CheckActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.nav_check:
+                    case R.id.nav_liked:
                         return true;
                     case R.id.nav_exit:
                         startActivity(new Intent(getApplicationContext(),ExitActivity.class));

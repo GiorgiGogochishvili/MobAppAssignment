@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <HorizontalScrollView
-        android:padding="10sp"
+        android:padding="5sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
