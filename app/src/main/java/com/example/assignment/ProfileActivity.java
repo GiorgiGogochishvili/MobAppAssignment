@@ -9,16 +9,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class CheckActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_liked);
+        setContentView(R.layout.activity_profile);
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.nav_liked);
+        bottomNavigationView.setSelectedItemId(R.id.nav_Profile);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -37,7 +37,7 @@ public class CheckActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.nav_liked:
+                    case R.id.nav_Profile:
                         return true;
                     case R.id.nav_exit:
                         startActivity(new Intent(getApplicationContext(),ExitActivity.class));

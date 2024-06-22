@@ -38,8 +38,8 @@ public class ExitActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.nav_liked:
-                        startActivity(new Intent(getApplicationContext(),CheckActivity.class));
+                    case R.id.nav_Profile:
+                        startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_exit:

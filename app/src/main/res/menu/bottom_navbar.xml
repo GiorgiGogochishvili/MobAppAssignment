@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 <!--liked-->
     <item
-        android:id="@+id/nav_liked"
+        android:id="@+id/nav_Profile"
         android:icon="@drawable/baseline_thumb_up_off_alt_24"
         tools:ignore="MenuTitle" />
 
