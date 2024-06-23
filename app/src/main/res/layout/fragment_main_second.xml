@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
-        android:text="You may want to visit"
-        android:textColor="@color/magenta"
+        android:text="You May Want to Visit"
+        android:textColor="@color/gold"
         android:textSize="24sp"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,8 +48,9 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
-                        android:layout_height="120dp"
+                        android:layout_height="150dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/profile" />
 
@@ -98,8 +99,9 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
-                        android:layout_height="120dp"
+                        android:layout_height="150dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/profile" />
 
@@ -148,8 +150,9 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
-                        android:layout_height="120dp"
+                        android:layout_height="150dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/profile" />
 
@@ -185,61 +188,6 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="4dp"
-                app:cardUseCompatPadding="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/profile" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginBottom="16dp"
-                        android:orientation="vertical"
-                        android:padding="8dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="24dp"
-                            android:layout_marginTop="8dp"
-                            android:text="House Party"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="24dp"
-                            android:layout_marginBottom="4dp"
-                            android:text="Something Street"
-                            android:textColor="@color/gray"
-                            android:textSize="15sp"
-                            android:textStyle="italic" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-
-
-
-
 
         </LinearLayout>
 

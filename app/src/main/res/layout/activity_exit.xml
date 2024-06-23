@@ -8,6 +8,8 @@
     android:background="@drawable/background_gradient"
     tools:context=".ExitActivity">
 
+
+    <!--    ""-->
     <fragment
         android:id="@+id/exitfragment1"
         android:name="com.example.assignment.exitFragment1"

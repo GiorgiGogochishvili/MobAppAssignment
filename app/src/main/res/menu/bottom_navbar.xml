@@ -4,7 +4,7 @@
 <!--liked-->
     <item
         android:id="@+id/nav_Profile"
-        android:icon="@drawable/baseline_thumb_up_off_alt_24"
+        android:icon="@drawable/person"
         tools:ignore="MenuTitle" />
 
     <item

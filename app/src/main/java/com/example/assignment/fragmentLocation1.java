@@ -26,11 +26,11 @@ public class fragmentLocation1 extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_location1, container, false);
         WebView webView = (WebView)v.findViewById(R.id.webView);
-        webView.getSettings().setJavaScriptEnabled(true);//enable js
+        webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setAllowContentAccess(true);
         webView.getSettings().setAllowFileAccess(true);
         webView.setWebViewClient(new WebViewClient());//to open url
-        webView.loadUrl("https://www.google.com/maps/place/Bichnigauri/");
+        webView.loadUrl("https://www.google.com/maps/place/Tbilisi/");
         return v;
     }
 }
