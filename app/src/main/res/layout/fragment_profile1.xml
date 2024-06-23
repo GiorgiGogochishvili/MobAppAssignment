@@ -48,7 +48,7 @@
                 android:layout_marginTop="66dp"
                 android:layout_marginEnd="148dp"
                 android:elevation="4sp"
-                app:cardCornerRadius="45sp">
+                app:cardCornerRadius="60sp">
 
                 <LinearLayout
                     android:layout_width="match_parent"

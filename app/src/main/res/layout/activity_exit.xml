@@ -10,25 +10,26 @@
 
 
     <!--    ""-->
+
     <fragment
         android:id="@+id/exitfragment1"
         android:name="com.example.assignment.exitFragment1"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="300dp"
         android:elevation="4dp"
         app:layout_constraintBottom_toTopOf="@+id/exitfragment2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.343" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <fragment
         android:id="@+id/exitfragment2"
         android:name="com.example.assignment.exitFragment2"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginBottom="148dp"
         android:elevation="4dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"

@@ -8,47 +8,31 @@
     android:background="@drawable/background_gradient"
     tools:context=".SettingsActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Host Your Own Event!"
-        android:textColor="@color/magenta"
-        android:textSize="24sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/fragment4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
-
-
-    <fragment
-        android:id="@+id/fragment4"
-        android:name="com.example.assignment.addFragment1"
-        android:layout_width="match_parent"
-        android:layout_height="200sp"
-        android:elevation="4sp"
-        app:layout_constraintBottom_toTopOf="@+id/fragment3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.5" />
 
     <fragment
         android:id="@+id/fragment3"
         android:name="com.example.assignment.addFragment2"
         android:layout_width="match_parent"
-        android:layout_height="300sp"
+        android:layout_height="150sp"
+        android:elevation="4sp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <fragment
+        android:id="@+id/fragment4"
+        android:name="com.example.assignment.addFragment1"
+        android:layout_width="match_parent"
+        android:layout_height="485sp"
+        android:layout_marginBottom="4dp"
         android:elevation="4sp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment4"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -59,8 +43,7 @@
         app:itemTextColor="@drawable/selector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_navbar"
-        tools:layout_editor_absoluteY="669dp" />
+        app:menu="@menu/bottom_navbar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,46 +7,17 @@
     tools:context=".addFragment2">
 
 
-    <EditText
-        android:id="@+id/editTextEventName"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/white"
-        android:drawableStart="@drawable/add_photo_svgrepo_com"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttonSelectPhoto"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@color/white"
-        android:text="Upload Photo"
-        android:textColor="@color/white"
-        android:textSize="12sp"
+        android:text="Submit Your Own Activity"
+        android:textColor="@color/gold"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEventName" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:background="@color/white"
-        android:text="Click To Submit"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.472"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSelectPhoto" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.16" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
